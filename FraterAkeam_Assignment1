@@ -1,0 +1,92 @@
+// See https://aka.ms/new-console-template for more information
+using System;
+
+public class Program
+{
+    private static string thirdChoice;
+
+    public static void Main()
+    {
+        //The User wakes up, confused, and in a home unbelongst to him, and hears a voice behind him
+        Console.WriteLine("Jacob: Tell me, young one. What is your name?");
+        //Enter name prompts the player to input their name
+        //string firstname = "Jacob";
+        string userName;
+        string lastName;
+
+        userName = Console.ReadLine();
+        //Player's name is stored in string UserName
+        Console.WriteLine("Jacob: And what is your last name?");
+
+        lastName = Console.ReadLine();
+
+        string fullName = $"{userName} {lastName}";
+        //Full name is to store both first "userName" and lastName together
+        Console.WriteLine("Jacob: Ah nice to meet you " + fullName);
+        //fullName should now read the full name
+
+        //User's name is being read
+
+        Console.WriteLine("Jacob: You have an... unusual name. You must not be from here. Shall I show you around?");
+        //User will be prompted to input whether or not they want a tour. They are to choose option yes, or option no
+
+        string choice = Console.ReadLine();
+
+        /*if statement for "choice" to see what the user will choose. Depending on the users input, 2 different
+         * responses will appear.
+         */
+        if (choice == "Yes")
+        {
+            Console.WriteLine("Jacob: Come along, then. Keep up.");
+            //User is brought to the entrance of the town.
+
+        }
+        else
+        {
+            string input = Console.ReadLine();
+            Console.WriteLine("Jacob: You said \"No?");
+            Console.WriteLine("We've got a go-getter on our hands. Just be sure to stay out of people's way. They're not kind here.");
+            //This will have the User walk off on his own.
+        }
+        userName = Console.ReadLine();
+        //User's name is being read
+
+        Console.WriteLine("Jacob: Will you be okay?");
+        Console.WriteLine("Input Yes or No");
+        //This will prompt you to answer.
+
+        string secondChoice = Console.ReadLine();
+
+        if (secondChoice == "Yes")
+        //This will allow User to learn of their next objective
+        {
+            Console.WriteLine("Jacob: There's a blacksmith a few minutes out.He goes by Blain. Go pay them a visit... you may need it");
+            //string firstName = "Blain";
+            //string lastname = "Stelen";
+
+            Console.WriteLine("Blain: Swords are 20 gold, shields are 15 gold.");
+            int wholeNumber = int.Parse("20, 15");
+        }
+        else if (secondChoice == "No")
+        {
+            Console.WriteLine("Jacob: Then it's decided. I'll show you around!");
+            Console.WriteLine("-Jacob brings User around town, first bringing him to the blacksmith-");
+            //The User will be taken around town. User will first be brought to a blacksmith
+
+            Console.WriteLine("Jacob: This is the town's blacksmith. Blain. Not very talkative, but very useful.\nWhy don't you buy something?");
+            Console.ReadLine();
+            Console.WriteLine("Jacob: Do you not have any money? Here! I've got some spare change. Go on.. befriend that old mope.");
+            //The User will then walk up to the blacksmith, and interact with him
+            Console.ReadLine();
+            Console.WriteLine("Blain: Swords are 20 gold, shields are 15 gold.");
+
+            int wholeNumber = int.Parse("20");
+            int wholeNumber1 = int.Parse("15");
+        }
+
+    }
+}
+
+
+        
+
